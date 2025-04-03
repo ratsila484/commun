@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Attention</h2>
+<mat-dialog-content>
+    {{action}} {{fileName}} ??
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-raised-button color="accent" (click)="sendAnswer(true)">{{labelYes}}</button>
+    <button mat-raised-button color="primary" (click)="sendAnswer(false)">{{labelNo}}</button>
+</mat-dialog-actions>

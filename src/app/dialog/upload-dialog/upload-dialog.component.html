@@ -1,0 +1,77 @@
+<h2 mat-dialog-title>Importer un fichier</h2>
+<mat-dialog-content>
+
+    <div class="modal-body">
+        <p class="mb-4 text-center">Faites glisser et déposez votre fichier ici ou cliquez
+            pour choisir un fichier.</p>
+          <p>Status : <span [style]="statutColor">{{statut}}</span></p>
+        <!-- Drag and Drop Area -->
+        <div class="drag-drop-area" id="dragDropArea">
+            <div class="card-body">
+                <div id="actions" class="row">
+                  <div class="col-lg-6">
+                    <div class="btn-group w-100">
+                      <button class="btn btn-success col fileinput-button">
+                        <i class="fas fa-plus"></i>
+                        <span>Ajouter fichier</span>
+                      </button>
+                      <button type="submit" class="btn btn-primary col start">
+                        <i class="fas fa-upload"></i>
+                        <span>Tout importer</span>
+                      </button>
+                      <button type="reset" class="btn btn-warning col cancel">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Annuler tout</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 d-flex align-items-center">
+                    <div class="fileupload-process w-100">
+                      <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table table-striped files" id="previews">
+                  <div id="template" class="row mt-2">
+                    <div class="col-auto">
+                        <span class="preview"><img src="data:," alt="" data-dz-thumbnail /></span>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <p class="mb-0">
+                          <span class="lead" data-dz-name></span>
+                          (<span data-dz-size></span>)
+                        </p>
+                        <strong class="error text-danger" data-dz-errormessage></strong>
+                    </div>
+                    <div class="col-4 d-flex align-items-center">
+                        <div class="progress progress-striped active w-100" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                          <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                        </div>
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                      <div class="btn-group">
+                        <button class="btn btn-primary start">
+                          <i class="fas fa-upload"></i>
+                          <span>importer</span>
+                        </button>
+                        <button data-dz-remove class="btn btn-warning cancel">
+                          <i class="fas fa-times-circle"></i>
+                          <span>Annuler</span>
+                        </button>
+                        <button data-dz-remove class="btn btn-danger delete">
+                          <i class="fas fa-trash"></i>
+                          <span>Supprimer</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-content align="center">
+    <button mat-button (click)="fermer()">Quiter</button>
+</mat-dialog-content>

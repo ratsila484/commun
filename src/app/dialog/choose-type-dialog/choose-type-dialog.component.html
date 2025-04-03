@@ -1,0 +1,56 @@
+<h2 mat-dialog-title>Choisir le type à uploader</h2>
+<mat-dialog-content>
+    <!-- <div class="toggle-radio mt-5 mb-5">
+        <input type="radio" name="rdo" id="yes"  checked>
+        <input type="radio" name="rdo" id="no">
+        <div class="switch">
+            <label  for="yes">Public</label>
+            <label  for="no">Privée</label>
+            <span></span>
+        </div>
+    </div> -->
+    <div class="toggle-radio">
+        <input type="radio" name="rdo" id="yes" value="Public" [(ngModel)]="selectedValue">
+        <input type="radio" name="rdo" id="no" value="Privée" [(ngModel)]="selectedValue">
+        <div class="switch">
+            <label for="yes">Public</label>
+            <label for="no">Privée</label>
+            <span></span>
+        </div>
+    </div  >
+    <div class="row">
+
+        @if(selectedValue != "Public"){
+        <p>Choisir les personnes qui auront accés aux fichiers</p>
+        <div  >
+            <label for="" class="form-label"></label>
+            <input
+                type="search"
+                class="form-control"
+                name=""
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                [(ngModel)]="searchText"
+                (input)="searchInput()"
+                
+            />
+        </div>
+        
+        <ul>
+            @for (user of filtredUsers; track $index) {
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" (change)="onSelectionChange($event,user.email)"  />
+                {{user.email}} 
+            </label>
+            }
+        </ul>
+        }
+
+    </div>
+    <!-- <p>Valeur sélectionnée : {{ selectedValue }}</p> -->
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-button color="primary" (click)="openUploadDialog()">Ok</button>
+    <button mat-button color="warn" mat-dialog-close="true">Quiter</button>
+</mat-dialog-actions>

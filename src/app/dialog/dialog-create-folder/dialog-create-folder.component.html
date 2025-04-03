@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Creer un dossier</h2>
+<mat-dialog-content>
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-folder"></i></span>
+            </div>
+            <input type="text" class="form-control" [(ngModel)]="folderName" placeholder="nom du dossier">
+        </div>
+        <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+            <input type="checkbox" name="statut" [(ngModel)]="isPrivate" class="custom-control-input"
+                id="customSwitch3">
+            <label class="custom-control-label" for="customSwitch3">
+                @if(isPrivate){
+                <span style="color: red;">Privé </span>
+                }
+                @if(!isPrivate){
+                <span style="color: green;">Public </span>
+                }
+            </label>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-raised-button color="accent" (click)="onCancel()">Annuler</button>
+    <button mat-raised-button color="primary" (click)="onCreate()">Creer</button>
+</mat-dialog-actions>

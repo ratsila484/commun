@@ -1,0 +1,161 @@
+/* Assurez-vous que la page prend toute la hauteur disponible */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Layout de la page */
+.content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f5faff; /* Fond léger bleu clair */
+    overflow: hidden;
+}
+
+/* Main block */
+.mainBloc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+/* Header de la page */
+.page-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Animation fadeIn */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Section des fonctionnalités */
+.features-section {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+}
+
+.feature-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.feature-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Carte des formations */
+.mainFormation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+/* Carte individuelle */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card .img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card .label {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card .detail {
+    padding: 0 15px 15px 15px;
+    font-size: 14px;
+    color: #777;
+    height: 70px;
+    overflow: hidden;
+}
+
+.card .inscription {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.card button {
+    background-color: #4e94ff;
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card button:hover {
+    background-color: #3971d4;
+}
+
+h3 {
+    color: #777;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 500;
+}

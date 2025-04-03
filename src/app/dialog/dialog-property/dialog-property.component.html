@@ -1,0 +1,67 @@
+<h2 mat-dialog-title>Prorpiété</h2>
+<mat-dialog-content>
+    <div class="card card-widget widget-user">
+        <!-- Add the bg color to the header using any of the bg-* classes -->
+        <div class="widget-user-header bg-info">
+            <h3 class="widget-user-username">{{formatNom(fileName, 50)}}</h3>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                        <h5 class="description-header">Chemin</h5>
+                        <span class="description-text">{{path}}</span>
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                        <h5 class="description-header">Importer par</h5>
+                        <span class="description-text">{{uploader}}</span>
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4">
+                    <div class="description-block">
+                        <h5 class="description-header">Taille</h5>
+                        <span class="description-text">{{taille}}</span>
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <div class="row">
+                <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                        <h5 class="description-header">Date d'importation</h5>
+                        <span class="description-text">{{dateUpload}}</span>
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                        <h5 class="description-header">Statut</h5>
+                        <span class="description-text">{{statut}}</span>
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4">
+                    <div class="description-block">
+                        <h5 class="description-header">Type</h5>
+                        <span class="description-text">{{type}}</span>
+                    </div>
+                    <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-raised-button color="accent" (click)="fermer()">Quitter</button>
+</mat-dialog-actions>

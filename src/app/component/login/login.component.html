@@ -1,0 +1,52 @@
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-5">
+            <!-- left column -->
+            <div class="col-lg-8">
+                <!-- jquery validation -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Connexion</h3>
+                    </div>
+                    <form id="quickForm">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Adrèsse mail</label>
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Enter email" required [(ngModel)]="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password" required [(ngModel)]="password">
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="button d-flex card-footer justify-content-center">
+                            <div class="mr-5">
+                                <button type="submit" class="btn btn-outline-primary" (click)="loginIn()" disable>
+                                    {{isLoading ? 'Inscription en cours' : "Se connecter"}}
+                                </button>
+                            </div>
+                            <div class="ml-5">
+                                <button type="reset" class="btn btn-outline-secondary">Effacer</button>
+                            </div>
+                        </div>
+                        <div class="signIn m-2">
+                            <span>Vous n'avez pas encore de compte ? <a href="signIn"> cliquez ici</a></span>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!--/.col (left) -->
+            <!-- right column -->
+            <div class="col-md-6">
+
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>

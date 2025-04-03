@@ -1,0 +1,70 @@
+/* Barre latérale avec fond sombre */
+.main-sidebar {
+    background: linear-gradient(135deg, #2f3542, #1c1e28);
+    color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Panel utilisateur */
+.user-panel .image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-panel .info a {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* Icônes et liens du menu */
+.nav-link {
+    color: #f1f1f1;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; /* Aligne l'icône et le texte horizontalement */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ajouter de l'espace entre l'icône et le texte */
+.nav-link i {
+    margin-right: 10px; /* Ajoute de l'espace à droite de l'icône */
+}
+
+/* Icône et texte survolés */
+.nav-link:hover {
+    background-color: #3a3f50;
+    color: #4e94ff;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Badge des notifications */
+.badge-info {
+    background-color: #4e94ff;
+}
+
+/* Séparation des sections */
+.nav-item {
+    margin-bottom: 15px;
+}
+
+/* Alignement centré du menu */
+.d-flex.flex-column.mt-auto.mb-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Log out en bas */
+.nav-item.mt-auto {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+

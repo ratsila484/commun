@@ -1,0 +1,163 @@
+.mainBloc{
+    background-color: #1AA7EC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70px;
+    height: 100vh;
+    left: 0;
+}
+
+.menuCollapse{
+    position: fixed;
+    left: 0;
+    display: flex;
+    width: 70px;
+}
+
+.menuCollapse div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.middle, .start, .bottom{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle button, .start button{
+    margin-bottom: 5px;
+    display: flex; 
+}
+
+i{
+    display: none;
+}
+
+@media screen and (min-width: 1400px){
+    .mainBloc{
+        width: 135px;
+    }
+    .middle, .start, .bottom{
+        display: flex;
+        align-items: baseline;
+    }
+
+    i{
+        display: inline;
+        margin-left: 5px;
+    }
+
+    .middle button, .start button{
+        width: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .mainBloc{
+        height: 100vh;
+        display: none;
+    }
+    .menuCollapse{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        padding-left: 10px;
+    }
+    .menuCollapse div{
+        box-shadow: 3px 3px 3px #3333338a;
+    }
+}
+
+.menuCollapseHidden{
+    background-color: #1AA7EC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70px;
+    height: 100vh;
+    left: 0;
+    transition: 0.5s all;
+    z-index: 10000000;
+}
+
+.afficherSideBar{
+    display: flex;
+}
+
+.deplacerDroite{
+    transform: translateX(60px);
+}
+
+.deplacerGauche{
+    transform: translateX(0);
+}
+
+.hideBtn{
+
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    align-items: center;
+    padding: 2px;
+    left: 70px;
+    background-color: #1AA7EC;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s all;
+    box-shadow: 2px 2px 2px #33333373;
+}
+
+.hideBtn:hover{
+    background-color: #c4c4c485;
+}
+
+.animeLeft{
+    animation: animeLeft 0.2s forwards;
+}
+
+
+
+@keyframes animeLeft{
+    0%{
+        transform: translateX(0px);
+    }   
+    100%{
+        transform: translateX(-75px);
+    } 
+}
+
+@keyframes animeRight{
+    0%{
+        transform: translateX(-75px);
+    }   
+    100%{
+        transform: translateX(0px);
+    } 
+}
+
+.animeRight{
+    animation: animeRight 0.2s forwards;
+}
+
+a{
+    cursor: pointer;
+    
+}
+
+
+
+

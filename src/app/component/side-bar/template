@@ -1,0 +1,52 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
+            <div class="image">
+                <img src="adminLte/avatar/avatar.png" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a (click)="profilePage()" class="d-block">Utilisateur</a>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2 d-flex flex-column flex-grow-1">
+            <ul class="nav nav-pills nav-sidebar flex-column h-100" data-widget="treeview" role="menu" data-accordion="false" id="blocMenu">
+                
+                <!-- HOME EN HAUT -->
+                <li class="nav-item">
+                    <a (click)="HomePage()" class="nav-link">
+                        <i class="nav-icon fa fa-home"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+
+                <!-- ÉLÉMENTS DU MILIEU (PARFAITEMENT CENTRÉS) -->
+                <div class="d-flex flex-column mt-auto mb-auto">
+                    <li class="nav-item">
+                        <a (click)="messagePage()" class="nav-link">
+                            <i class="nav-icon fab fa-whatsapp"></i>
+                            <p>Discussion <span class="badge badge-info right">6</span></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="commun2Page()" class="nav-link">
+                            <i class="nav-icon fa fa-file"></i>
+                            <p>Commun</p>
+                        </a>
+                    </li>
+                </div>
+
+                <!-- LOG OUT EN BAS -->
+                <li class="nav-item mt-auto">
+                    <a class="nav-link">
+                        <i class="nav-icon fa fa-power-off"></i>
+                        <p>Log Out</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

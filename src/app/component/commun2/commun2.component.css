@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.side-bar {
+    width: 200px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */ /* Pour que la sidebar soit fixe même lors du défilement */
+    top: 0;
+    left: 0;
+}
+
+.side-bar h3 {
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    margin-top: 50px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.nav-list li a:hover {
+    background: #34495e;
+}
+
+.content {
+    
+    flex-grow: 1;
+    padding: 20px;
+    background: white;
+}
+
+h2 {
+    color: #34495e;
+}
+
+.file-manager {
+    margin-top: 20px;
+}
+
+.file-grid {
+    border: 1px soldi red;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.file-item,#fileRow {
+    display: flex;
+    flex-direction: column;
+    background: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 170px;
+}
+
+
+
+.file-item:hover{
+    background-color: #007bff4d;
+}
+
+.file-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-download {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-download:hover {
+    background: #2980b9;
+}
+
+.btn-upload {
+    background: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.btn-upload:hover {
+    background: #27ae60;
+}
+
+/* Custom styling for the drag and drop area */
+.drag-drop-area {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.drag-text {
+    font-size: 16px;
+    color: #007bff;
+}
+
+/* Optional: Improve modal appearance */
+.modal-content {
+    border-radius: 10px;
+}
+
+/* Styling for file actions dropdown */
+.file-item,#fileRow {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.dropdown-toggle {
+    background-color: #c5c5c5c2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.dropdown-toggle:hover {
+    background-color: #3c88c3;
+}
+
+.dropdown-menu {
+    background-color: #2d3846;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+    background-color: #3c4550;
+    cursor: pointer;
+}
+
+.file-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Add some spacing between file items */
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+#fileIco{
+    font-size: 100px;
+}
+
+#menuLeft{
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #cce5ff; /* Couleur de fond pour les fichiers sélectionnés */
+    border: 1px solid #007bff; /* Bordure bleue pour les fichiers sélectionnés */
+  }
