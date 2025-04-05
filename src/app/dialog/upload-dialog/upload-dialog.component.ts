@@ -57,7 +57,7 @@ export class UploadDialogComponent implements AfterViewInit {
     previewNode.parentNode?.removeChild(previewNode);
 
     const myDropzone = new Dropzone(document.body, {
-      url: "http://localhost:8000/upload.php", // URL du script PHP
+      url: "http://192.168.0.253:5000/api/upload", // URL du script PHP
       method: "post",
       paramName: "file", // Nom du paramètre utilisé en PHP
       params: {
