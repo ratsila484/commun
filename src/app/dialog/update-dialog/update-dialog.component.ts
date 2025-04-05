@@ -98,7 +98,7 @@ export class UpdateDialogComponent {
     formData.append('statut', this.statut);
     formData.append('listDownload', this.toStringArray());
     formData.append('statut', this.statut);
-    this.http.post("http://localhost:8000/updateFile.php", formData).subscribe(
+    this.http.post("http://192.168.0.253:5000/api/update", formData).subscribe(
       (result: any) => {
         if (result.success) {
           //alert(result.message);
