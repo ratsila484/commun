@@ -20,13 +20,13 @@ export class UploadServiceTsService {
   }
 
   getFiles(): Observable<any> {
-    return this.http.get<any>('http://localhost:8000/liste_file.php');
+    return this.http.get<any>('http://192.168.0.253:5000/api/files');
   }
 
   // Fonction pour télécharger le fichier
   downloadFile(filename: string): void {
     const link = document.createElement('a');
-    link.href = `http://localhost:8000/download.php?filename=${filename}`;
+    link.href = `http://192.168.0.253:5000/api/download?filename=${filename}`;
     link.download = filename;
     link.click();
   }
