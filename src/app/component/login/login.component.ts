@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit{
       const formData = new FormData();
       formData.append('email', this.email);
       formData.append('password', this.password);
-      this.http.post("http://192.168.0.253:5000/api/login", formData).subscribe(
+      this.http.post("https://127.0.0.1:5000/api/login", formData).subscribe(
         (result: any) => {
           if (result.success) {
             this.actual_user = result.content;
