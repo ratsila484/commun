@@ -20,7 +20,7 @@ export class UploadServiceTsService {
   }
 
   getFiles(): Observable<any> {
-    return this.http.get<any>('http://192.168.0.253:5000/api/files');
+    return this.http.get<any>('https://127.0.0.1:5000/api/files');
   }
 
   // Fonction pour télécharger le fichier
