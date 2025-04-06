@@ -103,7 +103,7 @@ export class Commun2Component implements OnInit {
   fileClass = "file-item dropdown-toggle";
   ngOnInit(): void {
     this.loadFiles();
-    this.http.get("http://192.168.0.253:5000/api/user").subscribe(
+    this.http.get("https://127.0.0.1:5000/api/user").subscribe(
       (result: any) => {
         if (result.success) {
           this.listUser = result.users;
