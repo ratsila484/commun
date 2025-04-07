@@ -26,7 +26,7 @@ export class UploadServiceTsService {
   // Fonction pour télécharger le fichier
   downloadFile(filename: string): void {
     const link = document.createElement('a');
-    link.href = `http://192.168.0.253:5000/api/download?filename=${filename}`;
+    link.href = `https://127.0.0.1:5000/api/download?filename=${filename}`;
     link.download = filename;
     link.click();
   }
