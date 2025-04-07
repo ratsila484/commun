@@ -32,7 +32,7 @@ export class SignInComponent {
       formData.append("email", this.email);
       formData.append("nom", this.nom);
       formData.append("password", this.password);
-      this.http.post("http://192.168.0.253:5000/api/signin", formData).subscribe((result: any) => {
+      this.http.post("https://127.0.0.1:5000/api/signin", formData).subscribe((result: any) => {
         this.isLoading = false;
         if (result.success) {
           alert("Nouvelle utilisateur enregistrer  avec success");
