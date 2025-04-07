@@ -125,10 +125,11 @@ export class LocalComponent {
       this.listeFiles.push()
     });
   }
-
+  isFileLoading = false;
   loadFiles() {
     this.uploadService.getFiles().subscribe(
       response => {
+        this.isFileLoading = true;
         if (response.success) {
           this.files = response.files.filter(file => file.uploaders == this.storageLocal.getItem('user_connected'));
           this.filteredFiles = this.files; //initialiser filtredFiles avec tous les fichiers
@@ -138,6 +139,7 @@ export class LocalComponent {
       },
       error => console.error("Erreur :", error)
     );
+    this.isFileLoading = false;
   }
 
   canDownload(allowUser: string, uploader: string) {
