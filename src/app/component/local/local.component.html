@@ -88,12 +88,19 @@
 
                     </div>
                     }@empty {
+                  @if(isFileLoading){
                     <div class="no-result">
                         <p class="text-center" style="color: rgba(128, 128, 128, 0.541);">Désolé, fichier introuvable 😟
                         </p>
                     </div>
-
-                    }
+                  }
+                  @if (!isFileLoading) {
+                    <div class="onUpload">
+                        <p>Veuillez patientez ...</p>
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                    </div>
+                  }
+                  }
 
                 </div>
 
