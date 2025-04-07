@@ -280,7 +280,7 @@ isFileLoading = false;
       mydialog.afterClosed().subscribe(result => {
         //console.log(result);
         if (result) {
-          this.http.post('http://192.168.0.253:5000/api/delete', formData).subscribe((response: any) => {
+          this.http.post('https://127.0.0.1:5000/api/delete', formData).subscribe((response: any) => {
             if (response.success) {
               //alert("Fihcier supprimmer avec success");
               this.loadFiles();
@@ -316,7 +316,7 @@ isFileLoading = false;
       mydialog.afterClosed().subscribe(result => {
         //console.log(result);
         if (result) {
-          this.http.post('http://192.168.0.253:5000/api/delete', formData).subscribe((response: any) => {
+          this.http.post('https://127.0.0.1:5000/api/delete', formData).subscribe((response: any) => {
             if (response.success) {
               //alert("Fihcier supprimmer avec success");
               this.loadFiles();
@@ -363,7 +363,7 @@ isFileLoading = false;
     this.selectedFilees.forEach(element => {
       if (this.isHidden(element.statut, element.listDownload)) {
         const link = document.createElement('a');
-        link.href = `http://192.168.0.253:5000/api/download?filename=${element.chemin}`;
+        link.href = `https://127.0.0.1:5000/api/download?filename=${element.chemin}`;
         link.download = element.chemin;
         //ouvre un nlle onglt pour chaque fichier
         window.open(link.href, '_blank');
